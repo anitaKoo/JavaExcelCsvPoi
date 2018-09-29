@@ -21,7 +21,10 @@ public class ExcelReader {
         FileInputStream  file  = new FileInputStream((filename));
         Workbook workbook = WorkbookFactory.create(file);
         Sheet sheet = workbook.getSheetAt(0);
+
+        //Set value to String
         DataFormatter dataFormatter = new DataFormatter();
+
         Iterator<Row> rowIterator = sheet.rowIterator();
         rowIterator.next();
 
